@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final project: Cars</title>
+</head>
+<body>
+    <h1>Used Cars images</h1>
+    <h3>*For purposes of keeping the project simple there are only few options of cars.</h3>
+    <h4>(audi,ford,bmw,vw,toyota)</h4>
+    
+     <label for="Cname">Car Manufacturer:</label>
+     <input type="text" id="Cname" name="Cname"><br><br>
+     <button onclick="myFunction()">Search</button>
+
+	<p id="demo"></p>
+ <br>
+    <p> <img id="im1" src="{{ url_for('static', filename='test.png') }}" </p> 
+    <br>
+	<script>
+		function myFunction() {
+  			var x = document.getElementById("Cname").value;
+  			if (x== "audi") {
+  			document.getElementById("im1").src = "{{ url_for('static', filename='audi.jpg') }}";}
+  			else if (x== "ford") {
+  			document.getElementById("im1").src = "{{ url_for('static', filename='ford.jpg') }}";}
+  			else if (x== "bmw") {
+  			document.getElementById("im1").src = "{{ url_for('static', filename='bmw.jpg') }}";}
+  			else if (x== "vw") {
+  			document.getElementById("im1").src = "{{ url_for('static', filename='vw.jpg') }}";}
+  			else if (x== "toyota") {
+  			document.getElementById("im1").src = "{{ url_for('static', filename='toyota.jpg') }}";}
+  			
+		}
+	</script>
+   
+  
+</body>
+</html>
